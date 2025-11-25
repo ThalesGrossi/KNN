@@ -13,6 +13,8 @@ with open('credit.pkl', 'rb') as f:
     [x_credit_treinamento, y_credit_treinamento,
     x_credit_teste, y_credit_teste] = pickle.load(f)
 
+print(x_credit_treinamento)
+
 knn_credit = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
 knn_credit.fit(x_credit_treinamento, y_credit_treinamento)
 
